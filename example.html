@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    var file = {alpha: {'type':'folder','child':{gamma:{'type':'folder','child':null,'data':null}},'data':null}, beta: {'type':'image'}};
+    $(document).ready(function () {
+        for(var item in file){
+            $('.file-manager').append(makeDiv(item));
+        }
+    });
+
+    function makeDiv(str){
+        return '<div class="file-manager-tab">'+str+'</div>';
+    }
+</script>
+    <div class="file-manager"></div>
+</body>
+</html>
