@@ -1,12 +1,15 @@
+body{
+    height: 100%;
+}
 .file-manager-header{
     background-color: lightgray;
     border-radius: 5px;
-    margin: 5px;
     padding: 5px;
 }
 .file-manager-nav{
     background-color: gray;
     border-radius: 5px;
     width: 20%;
-    margin: 5px;
+    margin-top: 5px;
+    padding: 5px;
 }

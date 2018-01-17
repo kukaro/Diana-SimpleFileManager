@@ -13,5 +13,12 @@ function makeDiv(str) {
     if (str == undefined) {
         str = '';
     }
-    return '<button type="button" class="btn btn-info btn-outline-primary file-manager-button">' + str + '/</button>';
+    return '<button type="button" class="btn btn-info btn-outline-primary file-manager-button" onclick="fileManageNavUpdate(\'' + str + '\')">' + str + '/</button>';
+}
+
+function fileManageNavUpdate(str) {
+    if (str == '' || undefined) {
+        str = '/';
+    }
+    $('.file-manager-nav-title').html(str);
 }
