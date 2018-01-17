@@ -9,6 +9,7 @@ var file = {
 var currentPathToList = ['/'];
 var fileIndex = 1;
 var currentFile = file;
+
 $(document).ready(function () {
     $('.file-manager-header').append(makeHeaderDiv());
 });
@@ -24,7 +25,7 @@ function makeNavDiv(str) {
     if (str == undefined) {
         str = '';
     }
-    return '<button type="button" class="btn btn-info btn-outline-primary file-manager-nav-button" onclick="fileManagerNavUpdateToNav(\'' + str + '\')">' + str + '</button>';
+    return '<button type="button" class="btn btn-info btn-outline-primary file-manager-nav-button" onmouseup = "fileManagerRightClick()" onclick="fileManagerNavUpdateToNav(\'' + str + '\')">' + str + '</button>';
 }
 
 function fileManagerNavUpdateToHeader(str, num) {
@@ -89,5 +90,11 @@ function fileManagerNavUpdateToNav(str) {
     $('.file-manager-nav-body').html('');
     for (var item in currentFile['child']) {
         $('.file-manager-nav-body').append(makeNavDiv(item));
+    }
+}
+
+function fileManagerRightClick() {
+    if (event.button == 2) {
+        console.log('right');
     }
 }
