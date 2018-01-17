@@ -1,15 +1,44 @@
-body{
+body {
     height: 100%;
 }
-.file-manager-header{
+
+.file-manager-header {
     background-color: lightgray;
     border-radius: 5px;
     padding: 5px;
 }
-.file-manager-nav{
+
+.file-manager-nav {
     background-color: gray;
     border-radius: 5px;
     width: 20%;
     margin-top: 5px;
     padding: 5px;
+}
+
+.file-manager-nav-title {
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.file-manager-nav-title > span.file-manager-nav-title-label {
+    color: black;
+    font-weight: bold;
+}
+
+.file-manager-nav-body {
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.file-manager-nav-button{
+    width: 100%;
 }
