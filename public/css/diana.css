@@ -1,4 +1,12 @@
-.file-manager-nav{
+.file-manager-header{
     background-color: lightgray;
-    border:groove;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+.file-manager-nav{
+    background-color: gray;
+    border-radius: 5px;
+    width: 20%;
+    margin: 5px;
 }
