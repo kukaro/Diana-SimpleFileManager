@@ -25,7 +25,7 @@ function makeNavDiv(str) {
     if (str == undefined) {
         str = '';
     }
-    return '<button type="button" class="btn btn-info btn-outline-primary file-manager-nav-button" onmouseup = "fileManagerRightClick()" onclick="fileManagerNavUpdateToNav(\'' + str + '\')">' + str + '</button>';
+    return '<button type="button" class="btn btn-info btn-outline-primary file-manager-nav-button" onclick="fileManagerNavUpdateToNav(\'' + str + '\')">' + str + '</button>';
 }
 
 function fileManagerNavUpdateToHeader(str, num) {
@@ -93,8 +93,27 @@ function fileManagerNavUpdateToNav(str) {
     }
 }
 
-function fileManagerRightClick() {
-    if (event.button == 2) {
-        console.log('right');
-    }
-}
+// function fileManagerRightClick() {
+//     if (event.button == 2) {
+//         console.log('right');
+//     }
+// }
+
+var menu = new BootstrapMenu('.file-manager-nav-body', {
+    actions: [{
+        name: 'Action',
+        onClick: function() {
+            toastr.info("'Action' clicked!");
+        }
+    }, {
+        name: 'Another action',
+        onClick: function() {
+            toastr.info("'Another action' clicked!");
+        }
+    }, {
+        name: 'A third action',
+        onClick: function() {
+            toastr.info("'A third action' clicked!");
+        }
+    }]
+});
